@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+
+{% block main %}
+    <table class = "table table-boderless">
+    <thead>
+    <tr>
+        <th> Company name</th>
+        <th> Symbol</th>
+        <th> Current Price</th>
+        <th> Quantity</th>
+        <th> Purchased or Sold</th>
+        <th> Date and Time</th>
+
+
+    </tr>
+    </thead>
+    {% for  stock in info %}
+        <tbody>
+        <tr>
+
+            <th> {{  stock.c_name   }} </th>
+            <th> {{  stock.symbol   }} </th>
+            <th> {{ stock.price }} </th>
+            <th> {{  stock.quantity   }} </th>
+            <th> {{  stock.p_s   }} </th>
+            <th> {{ stock.datetime }}</th>
+
+
+        </tr>
+        </tbody>
+
+        {% endfor %}
+{% endblock %}

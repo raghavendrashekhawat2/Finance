@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Select stock
+{% endblock %}
+
+{% block main %}
+    <form action ="/quote" method = "post"
+    <fieldset>
+    <br></br>
+    Enter Stock Symbol :
+    <br></br>
+    <input type = "text" name = "symbol" autofocus autocomplete = "off" placeholder ="Symbol">
+    <br></br>
+    <button class="btn btn-default" type="submit">Quote</button>
+    </fieldset>
+{% endblock %}

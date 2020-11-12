@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Price
+
+{% endblock %}
+
+{% block main %}
+    <br></br>
+    The name of the stock is : {{ res["name"] }}
+    <br></br>
+    The price of the stock is : {{ res['price'] }}
+    <br></br>
+    The symbol of the stock is : {{ res["symbol"] }}
+    <br><br>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stock
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method = "post">
+    <br></br>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Select stock symbol</label>
+    <select class="form-control" name = "symbol">
+      {% for a in portf %}
+          <option>{{ a.symbol }}</option>
+          {% endfor %}
+    </select>
+    </div>
+    <br></br>
+    Enter stock quantity :
+    <br></br>
+    <input type = "number" name = "shares" placeholder = "Enter quantity" >
+    <br></br>
+    <div class="form-group">
+        <button class="btn btn-default" type="submit">Sell</button>
+    </div>
+    </form>
+
+  {% endblock %}

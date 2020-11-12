@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="Password (again)" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Register</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        document.querySelector('form').onsumbit = function() {
+            if(!document.querySelector('input').value){
+                alert ('must provide username!');
+                return false;
+            }
+            if(document.querySelector('input').value){
+                <div class="alert alert-primary " role = "alert">
+                    Must provide password!
+                    </div>
+                return false;
+            }
+            else {
+                return true ;
+                }
+        }
+
+    </script>
+{% endblock %}

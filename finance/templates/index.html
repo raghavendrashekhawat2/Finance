@@ -1,0 +1,47 @@
+{% extends  "layout.html"  %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+
+{% block main %}
+    <table class = "table table-boderless">
+    <thead>
+    <tr>
+        <th> Company name</th>
+        <th> Symbol</th>
+        <th> Quantity</th>
+        <th> Current Price</th>
+
+
+    </tr>
+    </thead>
+    {% for  a in portf %}
+        <tbody>
+        <tr>
+
+            <th> {{  a.c_name   }} </th>
+            <th> {{  a.symbol   }} </th>
+            <th> {{  a.quantity   }} </th>
+            <th> {{  a.price   }} </th>
+
+
+        </tr>
+        </tbody>
+
+        {% endfor %}
+
+    </table>
+
+    <br></br> <br></br> <br></br>
+    <h4>Cash remaining : {{ cash }} </h4>
+    <br></br>
+    <h4>Total value of Holdings : {{ sum }}</h4>
+
+    <h2>
+        <a href="http://ide50-raghavendrashekhawat1.legacy.cs50.io:8080/addcash" >Add Cash</a>
+    </h2></h2>
+
+
+{% endblock %}
